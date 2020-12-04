@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>The Dubai Mall</title>
+</head>
+<body>
+<nav class="navbar sticky-top navbar-light bg-light navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="#">THE DUBAI MALL</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-toggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav-toggler">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="shops.html">Shops</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aquarium.html">Aquarium</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="burj-khalifa.html">Burj Khalifa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="restaurants.html">Restaurants</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-5 full-body">
+    <div class="row row-cols-1 row-cols-lg-3" id="shopContainer">
+    </div>
+</div>
+
+<div class="container-fluid footer p-0 m-0 pt-5 pb-5">
+    <p class="text-center text-white">© 2020 Dubai Malls. All rights reserved.</p>
+</div>
+
+<div class="modal fade" id="shopModal" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-xl modal-lg modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title w-100 text-center">This is a title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="card">
+                    <div class="card-body">
+                        <div id="carouselImage" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselImage" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselImage" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                        <p class="card-text"></p>
+                    </div>
+                    <div class="card-footer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript">
+    var shops_name = [
+        ["050 Telecom", "Al Yousuf 3D Printing", "Apple Store", "Axiom"],
+        ['100% Capri','Alkon','Abercrombie',"Accessorize"],
+        ['1847 Executive Grooming for Men','Abdul Samad Al Qurashi', "Acqua Di Parma","Aesop"],
+        ["800 Leather","ALDO","American Rag Cie","AAPE"],
+        ["Agent Provocateur","Aigner","Alaia","B Hype"],
+        ["Ralph Lauren","Bloomingdales","Dyson","Frato"],
+        ["Mumuso","Early Learning Centre","Mamas & Papas","Caterpillar"]
+    ];
+
+    var shops_logo = [
+        ["050-telecom.png","al-yousuf-3d-printing.png","apple-store.png","axiom.png"],
+        ["100-capri.png","alkon.png","aber-crombie.png","accessorize.png"],
+        ["1847.png","al-samad-qurashi.jpg","acqua-di-parma.png","aesop.png"],
+        ["800-leather.jpg","aldo.jpg","american-ragcie.png","aape.jpg"],
+        ["agent-provecateur.png","aigner.png","alaia.png","bhype.png"],
+        ["ralph-lauren.png","bloomingdales.png","dyson.png","frato.png"],
+        ["mumuso.png","early-learning-centre.jpg","mamas-papas.png","caterpillar.jpg"]
+    ]
+
+    var shops_img = [
+        [
+            ['050-telecom-1.jpg','050-telecom-2.jpg','050-telecom-3.jpg'],
+            ['al-yousuf-1.jpg','al-yousuf-2.jpg','al-yousuf-3.jpg'],
+            ['apple-store-1.jpg','apple-store-2.jpg','apple-store-3.jpg'],
+            ['axiom-1.jpg','axiom-2.jpg','axiom-3.jpg']
+        ],
+        [
+            ['100-capri-1.jpg','100-capri-2.jpg','100-capri-3.jpg'],
+            ['alkon-1.jpeg','alkon-2.jpg','alkon-3.jpg'],
+            ['abercrombie-3.jpg','abercrombie-2.jpg','abercrombie-1.jpg'],
+            ['accessorize-1.jpg', 'accessorize-2.jpg', 'accessorize-3.jpeg'],
+        ],
+        [
+            ['1847-1.jpg','1847-2.jpg','1847-3.jpg'],
+            ['abdul-samed-al-qurashi-1.jpg','abdul-samed-al-qurashi-2.jpg','abdul-samed-al-qurashi-3.jpg'],
+            ['acqua-di-parma-1.jpg','acqua-di-parma-2.jpg','acqua-di-parma-3.jpg'],
+            ['aesop-1.jpg','aesop-2.jpg','aesop-3.jpg'],
+        ],
+        [
+            ['800-leather-1.jpg','800-leather-2.jpg','800-leather-3.jpg'],
+            ['aldo-1.jpg','aldo-2.jpg','aldo-3.jpg'],
+            ['american-ragcie-1.jpg','american-ragcie-2.jpg','american-ragcie-3.jpg'],
+            ['aape-1.jpeg','aape-2.jpg','aape-3.jpg'],
+        ],
+        [
+            ['agent-provocateur-1.jpg','agent-provocateur-2.jpg','agent-provocateur-3.jpg'],
+            ['aigner-1.jpg','aigner-2.jpg','aigner-3.jpg'],
+            ['alaia-1.png','alaia-2.png','alaia-3.png'],
+            ['b-hype-1.jpg','b-hype-2.jpeg','b-hype-3.jpg'],
+        ],
+        [
+            ['ralph-lauren-1.png','ralph-lauren-2.jpg','ralph-lauren-3.jpg'],
+            ['bloomingdales-1.jpg','bloomingdales-2.jpg','bloomingdales-3.jpg'],
+            ['dyson-1.jpg','dyson-2.jpg','dyson-3.jpg'],
+            ['frato-1.jpg','frato-2.jpg','frato-3.jpg']
+        ],
+        [
+            ['mumuso-1.jpg','mumuso-2.jpg','mumuso-3.jpg'],
+            ['early-learning-centre-1.jpg','early-learning-centre-2.jpg','early-learning-centre-3.jpg'],
+            ['mamas-papas-1.jpg','mamas-papas-2.jpeg','mamas-papas-3.jpeg'],
+            ['caterpillar-1.jpg','caterpillar-2.jpg','caterpillar-3.jpg']
+        ]
+    ]
+
+    var shops_desc = [
+        [
+            "050telecom was founded in 1997 with the objective of becoming one of the leading providers of telecom products and services of unique quality based on customer satisfaction.",
+            "We are a 3D total Solution Company (Design, Create, Customize, Implement, Fabricate) your own idea",
+            "At the heart of every Apple Store is the drive to educate and inspire",
+            "Axiom Telecom is the largest and leading, authorised distributor and retailer for mobile phones, mobile accessories, and PDA's in the Middle East."
+        ],
+        [
+            "100% Capri is the best linen in the world. A way to live to the fullest; a way to travel to the world's most picturesque resorts; a way to stand out.",
+            "Creativity, Innovation and Quality are at the heart of everything we do which makes us unique. ALKON is your gateway into the pop culture merchandise universe.",
+            "Abercrombie Kids stands for American style with a fun, youthful attitude. Known for its made-to-play durability, comfort and on-trend designs, Abercrombie Kids makes cool, classic clothing that kids truly want to wear.",
+            "The first Accessorize store opened in London’s Covent Garden Piazza in 1984 and has since grown into an internationally recognised accessories wonderland. Designed in London, loved worldwide."
+        ],
+        [
+            "We offer a unique executive grooming experience for men.",
+            "Abdul Samad Al Qurashi Company has deep roots in history. The company has grown through word of mouth and recommendation by providing quality service and fragrances.",
+            "Acqua di Parma is an Italian lifestyle and fashion company that produces fragrances, candles, bathrobes and leather accessories",
+            "Skin, hair and body care formulations created with meticulous attention to detail, and with efficacy and sensory pleasure in mind"
+        ],
+        [
+            "800 Leather is one of the market leaders today in professional leather cleaning, repair, restoration, upholstery works. We started with a simple mission “To be the leaders in luxury leather care”. We are recognized today for our style of craftsmanship, professionalism, quality and genuine care.",
+            "Inspiration is everywhere.",
+            "American Rag Cie at The Dubai Mall is home to over 200 brands, with many exciting exclusives and regional first drops. The stores focus is the top trending men’s and women’s streetwear in the market, with the likes of international brands such as Champion, Balr, Eleven Paris, Misbhv and more. Specialty fashion and new-wave innovation has come together under one immersive roof to redefine the ultimate shopping experience.",
+            "AAPE is a street culture inspired fashion brand with unique style, quality, and attitude which targets youngsters who love Street Culture, Hip Hop and Pop, and love dressing in stylish street looks. The brand has a strong niche position in Japan, China, Singapore, and Hong Kong.",
+        ],
+        [
+            "Founded in 1994, Agent Provocateur empowers women to celebrate and enjoy their sensuality. Agent Provocateur believes in beautiful design and exceptional quality.",
+            "Aigner, a high-end German Fashion brand specialising in Luxury Goods like Leather bags, wallets watches & accessories. Aigner is known to be a German Brand with an Italian Soul.",
+            "Tunisian-born designer Azzedine Alaia has earned scores of high-profile fans with his flattering, clingy silhouettes.",
+            "B Hype is the new leading brand in vintage-street fashion, with its first global outlet now open in Dubai Mall!",
+        ],
+        [
+            "Ralph Lauren Corporation is a global leader in the design, marketing and distribution of premium lifestyle products in five categories: apparel, accessories, home, fragrances and hospitality. For more than 50 years, Ralph Lauren's reputation and distinctive image have been consistently developed across an expanding number of products, brands and international markets.",
+            "Boasting three levels of designer apparel, beauty and accessories, Bloomingdale's Fashion delivers a world-class retail experience to all who enter. The modern luxury department store showcases a brand portfolio representing the latest and most desirable merchandise for women, men and kids alike.",
+            "Dyson is a British technology enterprise. Our technologies are researched, designed and developed in the UK, including vacuum cleaners, air purifiers and hair care. Visit the Dyson Demo to experience.",
+            "From its beginnings as a high-end jewellery house, over time FRATO organically grew into a luxury interiors label, one that applies the same artisanal approach and jeweller’s eye for detail to each of its exquisite furniture pieces."
+        ],
+        [
+            "Caterpillar clothing, footwear, toys, scale models, accessories, and more.",
+            "We love inspiring play; it's at the heart of everything we do. It's where fun and learning go hand in hand. At ELC, we help parents help children grow into happy, self-confident people.",
+            "Britain’s favourite nursery brand Mamas & Papas provides thoughtful designs and practical support for parents and babies.",
+            "Mumuso is a brand which focuses on fashion. Our products are manufactured in China, Korea, Japan, Thailand, Singapore, and so on, providing clients with a wide range of fine goods to choose from."
+        ]
+    ]
+    var path ="./images/shops/pics/";
+    var logo_path = "./images/shops/logo/";
+
+    $(document).ready(function(){
+
+        let url = window.location.href;
+        let info = breakUpURLParameters(url);
+        let cat_id = info.search.c;
+
+        let content = '';
+        for(let i = 0; i<shops_name[cat_id].length; ++i) {
+            content+=`<div class="col">
+                        <a href="#" data-cat="${cat_id}" data-shop="${i}" data-toggle="modal" data-target="#shopModal">
+                            <div class="card shadow p-3 mb-5 bg-white rounded">
+                                <img src="${logo_path}${shops_logo[cat_id][i]}" class="img-fluid"/>
+                            </div>
+                        </a>
+                       </div>`;
+        }
+        $('#shopContainer').html(content);
+    });
+
+    $('#shopModal').on('show.bs.modal', function (event) {
+        let cat_id = $(event.relatedTarget).data('cat');
+        let shop_id = $(event.relatedTarget).data('shop');
+        let slider = '';
+        let active = '';
+
+        $(this).find('.modal-title').text(shops_name[cat_id][shop_id]);
+        $(this).find('.card-footer').text(shops_desc[cat_id][shop_id]);
+
+        for(let i = 0; i<3; ++i) {
+            if(i===0)
+                active = ' active';
+            slider+=`<div class="carousel-item${active}">
+                    <img src="${path}${shops_img[cat_id][shop_id][i]}" />
+                 </div>`;
+            if(i===0)
+                active='';
+        }
+        $(this).find('.carousel-inner').html(slider);
+    });
+</script>
+</html>
