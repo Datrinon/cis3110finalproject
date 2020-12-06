@@ -1,7 +1,11 @@
 body {
-    font-family: "Tw Cen MT";
-    background-color: rgb(224, 224, 224);
-    color: rgb(72, 63, 26);
+    font-family     : "Tw Cen MT", sans-serif;
+    background-color: rgb(241, 241, 242);
+    color           : rgb(72, 63, 26);
+}
+
+.nav-item {
+    font-size: 120%;
 }
 
 /* CSS for logo image */
@@ -11,7 +15,8 @@ img.navbar-brand {
 
 /* CSS for logo text */
 a.navbar-brand {
-    font-size: 2em;
+    font-size  : 2em;
+    font-family: "Californian FB", "Georgia", serif;
 }
 
 /* Adjust size of the carousel */
@@ -26,31 +31,36 @@ a.navbar-brand {
 }
 
 .carousel-caption {
-    
+
     text-shadow: 1px 1px 2px black;
     position   : absolute;
     top        : 30%;
     transform  : translateY(50%);
 }
 
+/* This deals with the section - title "Dubai Mall - A place... */
 .section-title {
     border-bottom: 2px solid rgba(172, 168, 156, 0.782);
 }
 
 /* The size of the article image. */
 .articleImage {
-    
-    max-height: 45vh;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border: 2px solid rgba(255, 255, 255, 0.748);
+
+    max-height  : 45vh;
+    height      : 100%;
+    width       : 100%;
+    object-fit  : cover;
+    border      : 2px solid rgba(255, 255, 255, 0.748);
     /* max-width: 50vh; */
 }
 
+.subheader {
+    text-align: center;
+}
 
+/* This is the background for the Burj Khalifa page. */
 .bhurj-bg {
-    background-image : url("../images/burj-khalifa.jpg");
+    background-image : url("../images/burjkhalifapage/burjkhalifa.jpg");
     height           : 100vh;
     background-size  : cover;
     background-repeat: no-repeat;
@@ -60,6 +70,7 @@ a.navbar-brand {
     margin-top : -15%;
     margin-left: 4%;
     color      : white;
+    text-shadow: 1px 1px 2px black;
 }
 
 .bhurj-text h2 {
@@ -76,4 +87,82 @@ a.navbar-brand {
 
 .footer {
     background-color: black;
+}
+
+/* banner for the shops. This rule selects all elements inside of it.*/
+.shops-banner>* {
+    max-height: 400px;
+    object-fit: cover;
+    width     : 100%;
+}
+
+.shops-banner>h1 {
+    font-size: 7vh;
+}
+
+.shops-banner>img {
+    width          : 100%;
+    border-left    : 2px solid rgba(172, 168, 156, 0.782);
+    border         : 2px solid rgba(255, 255, 255, 0.748);
+    padding-left   : 0px;
+    padding-right  : 0px;
+    object-fit     : cover;
+    object-position: center top;
+}
+
+.icon {    
+    font-size: 5em;
+    color    : rgba(135, 132, 123, 0.782);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Change carousel icon to dots */
+.carousel-indicators li {
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+  }
+
+/* aquarium carousel css */
+.aquarium-carousel>div>img {
+    max-height: 300px;
+    object-fit: cover;
+}
+
+@media(max-width: 800px) {
+    .aquarium-carousel>div>img {
+        max-height: 200px;
+        object-fit:cover;
+    }
+}
+
+/* For the cards used on the aquarium page. */
+.card-img-top.mt-1 {
+    object-fit: cover;
+    max-height: 200px;
+    border: 1px solid rgba(172, 168, 156, 0.782);
+}
+
+
+/* For the cards used on the Burj Khalifa page */
+.bk-cards>.card-title, .bk-cards>.card-text, .bk-cards>ul {
+    text-shadow: 0px 0px 3px black;
+    /* font-size: 115%; */
+}
+
+.bk-image {
+    object-fit: cover;
+    max-height: 350px;
+    background-color: black;
+    filter: blur(2px) brightness(75%);
+}
+
+/* Select all h5 elements that have a div parent in which bk-image preceds them */
+.bk-image + div > h5 {
+    font-size: 3em;
+}
+
+.bk-image + div > p {
+    font-size: 2em;
 }
