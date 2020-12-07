@@ -50,7 +50,7 @@
     </div>
     <div class="container mx-auto my-5">
         <div class="col-md-12">
-            <button type="button" class="btn btn-primary" onclick="document.location='restaurants.html'"> Return
+            <button type="button" id="btn_go_back" class="btn btn-primary" onclick="document.location='restaurants.html'"> Return
             </button>
         </div>
     </div>
@@ -170,6 +170,10 @@
         $('#title_container').html(`<h2 class="text-center mb-5">${shops_name[cuisine_id][restaurant_id]}</h2>`);
         $('#img_container').html(`<img src='${path}${shops_img[cuisine_id][restaurant_id]}' class='img-fluid mb-5'>`);
         $('#desc_container').html(`<p>${shops_desc[cuisine_id][restaurant_id]}</p>`)
+        //$('#btn_go_back').attr('onclick',"restaurant_info.html?c="+cuisine_id);
+        $('#btn_go_back').click(function(){
+            window.location = 'restaurant_info.html?c='+cuisine_id;
+        })
     });
 
 
