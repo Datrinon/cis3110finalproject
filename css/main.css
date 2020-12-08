@@ -31,7 +31,7 @@ a.navbar-brand {
 
 /* Adjust size of the carousel */
 .carousel-inner {
-    max-height   : 55vh;
+    /* max-height   : 55vh; */
     /* max-height: 800px; */
 }
 
