@@ -112,7 +112,7 @@ a.navbar-brand {
 .bhurj-text {
     margin-top : -15%;
     margin-left: 4%;
-    color      : rgba(255, 255, 255, 0.748));
+    color      : rgba(255, 255, 255, 0.748);
     text-shadow: 1px 1px 2px black;
     animation                : burjAnimation ease 3s;
     animation-iteration-count: 1;
@@ -120,7 +120,7 @@ a.navbar-brand {
 }
 
 .bhurj-text h2 {
-    font-size: 5rem;
+    font-size: 4.75rem;
 }
 
 .bhurj-text h2 span {
