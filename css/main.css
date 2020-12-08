@@ -1,3 +1,13 @@
+@font-face{
+    font-family: "Tw Cen MT";
+    src: url(../fonts/twcen.ttf);
+}
+
+@font-face{
+    font-family: "Californian FB";
+    src: url(../fonts/californianfb.ttf);
+}
+
 body {
     font-family     : "Tw Cen MT", sans-serif;
     background-color: rgb(241, 241, 242);
@@ -79,7 +89,6 @@ a.navbar-brand {
 @keyframes fadeInAnimation {
     0% {
         transform: translate(-50%);
-        color    :rgba(135, 132, 123, 0);
         opacity  : 0;
     }
 
@@ -95,7 +104,7 @@ a.navbar-brand {
     height           : 100vh;
     background-size  : cover;
     background-repeat: no-repeat;
-    animation                : slideAnimation ease 1s;
+    animation                : fadeInBurjKhalifa ease 1s;
     animation-iteration-count: 1;
     animation-fill-mode      : forwards;
 }
@@ -121,7 +130,7 @@ a.navbar-brand {
     animation-fill-mode      : forwards;
 }
 
-@keyframes slideAnimation {
+@keyframes fadeInBurjKhalifa {
     0% {
         opacity: 0.25;
     }
@@ -144,8 +153,6 @@ a.navbar-brand {
 
 @keyframes burjFactAnimation {
     0% {
-        translate: scale(0.5);
-        color    :rgba(0,0,0, 0);
         opacity  : 0;
     }
 
