@@ -51,12 +51,19 @@
         </div>
     </div>
 
+    <div class="container mx-auto my-5">
+        <div class="col-md-12">
+            <button type="button" id="btn_go_back" class="btn btn-primary" onclick="document.location='shops.html'"> Return
+            </button>
+        </div>
+    </div>
+
     <div class="container-fluid footer p-0 m-0 pt-5 pb-5">
         <p class="text-center text-white">© 2020 Dubai Malls. All rights reserved.</p>
     </div>
 
     <div class="modal fade" id="shopModal" data-backdrop="static" data-keyboard="false">
-        <div class="modal-dialog modal-xl modal-lg modal-sm">
+        <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title w-100 text-center">This is a title</h5>
@@ -241,7 +248,7 @@
             if (i === 0)
                 active = ' active';
             slider += `<div class="carousel-item${active}">
-                    <img src="${path}${shops_img[cat_id][shop_id][i]}" />
+                    <img src="${path}${shops_img[cat_id][shop_id][i]}" class="img-fluid"/>
                  </div>`;
             if (i === 0)
                 active = '';
