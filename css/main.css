@@ -58,23 +58,101 @@ a.navbar-brand {
     text-align: center;
 }
 
+
+.aquarium-jt {
+    background-image : url('../images/aquarium-main.jpg');
+    height           : 65vh;
+    background-size  : cover;
+    background-repeat: no-repeat;
+}
+
+.aquarium-jt>h1 {
+    background               : rgb(55, 137, 139);
+    background               : linear-gradient(65deg, rgb(50, 99, 100) 0%, rgba(139, 250, 255, 0) 100%);
+    font-size                : 5em;
+    margin-bottom            : 15%;
+    animation                : fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode      : forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        transform: translate(-50%);
+        color    :rgba(135, 132, 123, 0);
+        opacity  : 0;
+    }
+
+    100% {
+        color  : rgb(190, 246, 253);
+        opacity: 1;
+    }
+}
+
 /* This is the background for the Burj Khalifa page. */
 .bhurj-bg {
     background-image : url("../images/burjkhalifapage/burjkhalifa.jpg");
     height           : 100vh;
     background-size  : cover;
     background-repeat: no-repeat;
+    animation                : slideAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode      : forwards;
 }
 
 .bhurj-text {
     margin-top : -15%;
     margin-left: 4%;
-    color      : white;
+    color      : rgba(255, 255, 255, 0.748));
     text-shadow: 1px 1px 2px black;
+    animation                : burjAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode      : forwards;
 }
 
 .bhurj-text h2 {
     font-size: 5rem;
+}
+
+.bhurj-text h2 span {
+    font-size: 0.4em;
+    animation                : burjFactAnimation 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode      : forwards;
+}
+
+@keyframes slideAnimation {
+    0% {
+        opacity: 0.25;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes burjAnimation {
+    0% {
+        color    :rgba(135, 132, 123, 0);
+        opacity  : 0;
+    }
+
+    100% {
+        color  : rgb(255, 255, 255);
+        opacity: 1;
+    }
+}
+
+@keyframes burjFactAnimation {
+    0% {
+        translate: scale(0.5);
+        color    :rgba(0,0,0, 0);
+        opacity  : 0;
+    }
+
+    100% {
+        color  : rgb(243, 96, 96);
+        opacity: 1;
+    }
 }
 
 .full-body {
@@ -110,19 +188,19 @@ a.navbar-brand {
     object-position: center top;
 }
 
-.icon {    
-    font-size: 5em;
-    color    : rgba(135, 132, 123, 0.782);
-    margin-left: auto;
+.icon {
+    font-size   : 5em;
+    color       : rgba(135, 132, 123, 0.782);
+    margin-left : auto;
     margin-right: auto;
 }
 
 /* Change carousel icon to dots */
 .carousel-indicators li {
-    width: 5px;
-    height: 5px;
+    width        : 5px;
+    height       : 5px;
     border-radius: 100%;
-  }
+}
 
 /* aquarium carousel css */
 .aquarium-carousel>div>img {
@@ -133,7 +211,7 @@ a.navbar-brand {
 @media(max-width: 800px) {
     .aquarium-carousel>div>img {
         max-height: 200px;
-        object-fit:cover;
+        object-fit: cover;
     }
 }
 
@@ -141,28 +219,31 @@ a.navbar-brand {
 .card-img-top.mt-1 {
     object-fit: cover;
     max-height: 200px;
-    border: 1px solid rgba(172, 168, 156, 0.782);
+    border    : 1px solid rgba(172, 168, 156, 0.782);
 }
 
 
+
 /* For the cards used on the Burj Khalifa page */
-.bk-cards>.card-title, .bk-cards>.card-text, .bk-cards>ul {
-    text-shadow: 0px 0px 3px black;
+.bk-cards>.card-title,
+.bk-cards>.card-text,
+.bk-cards>ul {
+    text-shadow : 0px 0px 3px black;
     /* font-size: 115%; */
 }
 
 .bk-image {
-    object-fit: cover;
-    max-height: 350px;
+    object-fit      : cover;
+    max-height      : 350px;
     background-color: black;
-    filter: blur(2px) brightness(75%);
+    filter          : blur(2px) brightness(75%);
 }
 
 /* Select all h5 elements that have a div parent in which bk-image preceds them */
-.bk-image + div > h5 {
+.bk-image+div>h5 {
     font-size: 3em;
 }
 
-.bk-image + div > p {
+.bk-image+div>p {
     font-size: 2em;
 }
